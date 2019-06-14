@@ -1,8 +1,10 @@
 # Krestianstvo Luminary
 
 The source code of the current **Luminary** implementation mainly at [LiveCoding.space](https://livecoding.space) project repository:   
+
 [**luminary** branch ](https://github.com/NikolaySuslov/livecodingspace/tree/luminary)  
-[**luminary-partial** branch ](https://github.com/NikolaySuslov/livecodingspace/tree/luminary-partial)
+[**luminary-partial** branch ](https://github.com/NikolaySuslov/livecodingspace/tree/luminary-partial)  
+
 ---
 
 ## Krestianstvo Luminary for Open Croquet architecture and Virtual World Framework in peer-to-peer Web
