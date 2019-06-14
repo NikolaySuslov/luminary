@@ -33,7 +33,7 @@ if(ssl){
 global.gun = Gun({web: config.server.listen(config.port)}); //until: 5000, chunk: 10
 console.log('Relay peer started on port ' + config.port + ' with /gun');
 
-//USE IT, IF YOU WANT HAVE A LUMINARY METRONOME JUST ON NODE.JS GUN DB
+//USE IT, IF YOU WANT HAVE A LUMINARY DEDICATED METRONOME ON NODE.JS GUN DB
 
 Gun.chain.heartbeat = function (time, rate) {
     // our gun instance
