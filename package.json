@@ -1,0 +1,22 @@
+{
+  "name": "luminary",
+  "version": "0.0.1",
+  "description": "Krestianstvo Luminary for Open Croquet architecture and Virtual World Framework in peer-to-peer Web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./luminary-node/index.js",
+    "startSSL": "node ./luminary-node/index.js -p 8080 -s -k ./certs/192.168.0.10.key -c ./certs/192.168.0.10.pem"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NikolaySuslov/luminary.git"
+  },
+  "keywords": [],
+  "author": "Nikolay Suslov",
+  "license": "MIT",
+  "dependencies": {
+    "gun": "0.2019.515",
+    "optimist": "0.6.1"
+  }
+}
