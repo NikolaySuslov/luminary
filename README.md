@@ -14,7 +14,20 @@ Everyone who is familiar with [Croquet architecture](https://en.wikipedia.org/wi
 However, while working on [LiveCoding.space](https://www.krestianstvo.org/sdk3) project by Krestianstvo.org that is heavily based on [Virtual World Framework](https://en.wikipedia.org/wiki/Virtual_world_framework) (containing elements of Open Croquet architecture), I have started revising the current Reflector server.
 
 Let me introduce to you an ideas and early prototype of the **Krestianstvo Luminary** for Open Croquet architecture and Virtual World Framework. 
-**Krestianstvo Luminary** potentially could replace Reflector server in flavour of using offline-first [Gun DB](https://gun.eco/docs/Introduction) pure distributed storage system. That allows instead of ‘Reflecting’ messages with centralised Croquet’s time now, to ‘Shining’ time on every connected node using Gun’s [Hypothetical Amnesia Machine](https://gun.eco/docs/Hypothetical-Amnesia-Machine), running in peer-to-peer Web. Also to secure all external messages streams by using peer-to-peer identities and [SEA](https://gun.eco/docs/SEA) cryptographic library for Gun DB. More over running Luminary on [AXE](https://gun.eco/docs/AXE#faq) blockchain.
+**Krestianstvo Luminary** potentially could replace Reflector server in flavour of using offline-first [Gun DB](https://gun.eco/docs/Introduction) pure distributed storage system. That allows instead of ‘Reflecting’ messages with centralised Croquet’s time now, to ‘Shining’ time on every connected node using Gun’s [Hypothetical Amnesia Machine](https://gun.eco/docs/Hypothetical-Amnesia-Machine), running in peer-to-peer Web. Also to secure all external messages streams by using peer-to-peer identities and [SEA](https://gun.eco/docs/SEA) cryptographic library for Gun DB. More over running Luminary on [AXE](https://gun.eco/docs/AXE#faq) blockchain.  
+**Krestianstvo Luminary** simply transforms the only server related Croquet’s part - Reflector (taken from VWF version) into the pure peer-to-peer application, running on a client’s Web Browsers.  
+
+| | Croquet&nbsp;Reflector&nbsp;(VWF) | Krestianstvo Luminary |
+| --- | :---: | :---: |
+| **Architecture:** | Client-Server | Peer-to-Peer |
+| **Croquet time stamp:** | on server | on peer |
+| **Time now is:** | server machine’s time | GunDB HAM state: combines timestamps, vector clocks, and a conflict resolution algorithm |
+| source code | new Date( ).getTime( ) | Gun.state.is ( node, property ) |
+| **Heartbeat messages:** | by server | by selected peer |
+| **Reflector app logic:** | on server | on peer |
+| **Hosting:** | dedicated server with Web Sockets | peer’s Web Browsers connected through Daisy-chain Ad-hoc Mesh-network (for swapping in different transport layers: Web Sockets, WebRTC, etc.) |
+| **Securing the streams of messages:** | by server | by peer-to-peer identities |
+
 
 For those who are not familiar with Open Croquet architecture, just want to mark key principals behind it in simple words. 
 
@@ -176,8 +189,8 @@ Actually that’s it!
 
 ### Conclusions
 
-* no Reflector server needed (any running Gun DB instance on a network fits, could know nothing about VWF app and clients)
-* clients, world instances, connecting logic - holding by distributed DB and clients
+* Reflector server is no longer required for running virtual worlds (any existed GunDB instance on a network fits, could know nothing about Croquet and clients)
+* clients, world instances, connecting logic are hold by a distributed DB
 * stamping messages are doing by clients themselves using Gun’s HAM
 * one dedicated peer, producing metronome empty messages for moving time forward (could be anywhere)
 
