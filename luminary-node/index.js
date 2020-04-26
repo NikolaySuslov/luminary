@@ -1,5 +1,5 @@
 var fs = require('fs'),
-    argv = require('optimist').argv,
+    argv = require('yargs').argv,
     Metronome = require('./metronome');
 
 var Gun = require('gun')

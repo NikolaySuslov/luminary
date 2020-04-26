@@ -2,8 +2,11 @@
 
 The source code of the current **Luminary** implementation mainly at [LiveCoding.space](https://livecoding.space) project repository:   
 
-[**luminary** branch ](https://github.com/NikolaySuslov/livecodingspace/tree/luminary)  
-[**luminary-partial** branch ](https://github.com/NikolaySuslov/livecodingspace/tree/luminary-partial)  
+- **Krestianstvo Luminary** functional prototype is avaliable to try out at https://livecoding.space  
+
+- **Source code** at [LiveCoding.space GitHub repository **master** branch](https://github.com/NikolaySuslov/livecodingspace)  
+
+- **Research paper** about Krestianstvo Luminary architecture here: [download / read](/paper/Luminary.pdf)
 
 ---
 
@@ -203,7 +206,7 @@ There are performance issues, as Gun DB is using [RAD storage adapter](https://g
 
 ### Source code
 
-The raw code is available at [LiveCoding.space GitHub repository](https://github.com/NikolaySuslov/livecodingspace) under the [branch **‘luminary’**](https://github.com/NikolaySuslov/livecodingspace/tree/luminary).
+The source code for Luminary is available at [LiveCoding.space GitHub repository](https://github.com/NikolaySuslov/livecodingspace) under the [**master** branch](https://github.com/NikolaySuslov/livecodingspace/tree/master).
 
 The [branch **‘luminary-partial’**](https://github.com/NikolaySuslov/livecodingspace/tree/luminary-partial) contains working prototype of partial Luminary, when one master-client is chosen for reflector logic, it uses **Gun.state()** for stamping messages, as it was done in the original reflector app, and then distribute as updates to other peers through Gun DB.  
 
